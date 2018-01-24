@@ -1,0 +1,27 @@
+{
+  "name": "mooncode",
+  "version": "0.1.0",
+  "description": "A small language which implements the basics of JavaScript in a simple way.",
+  "scripts": {
+	  "build": "babel src -d dist",
+	  "buildstart": "nearleyc src/grammar/grammar.ne -o src/grammar/grammar.js && babel src -d dist && node dist/main.js",
+      "start": "node dist/main.js",
+	  "nearleyc": "nearleyc src/grammar/grammar.ne -o src/grammar/grammar.js",
+	  "nearley-test": "nearley-test src/grammar/grammar.js --input foo\n"
+  },
+  "keywords": [
+    "language",
+    "transpiler",
+    "compiler",
+    "javascript",
+    "moonscript"
+  ],
+  "author": "Ramon Brand",
+  "license": "MIT",
+  "devDependencies": {
+    "nearley": "^2.11.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
